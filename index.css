@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+/*HEADER*/
+
+.titulo h1 {
+    text-align: center;
+    padding: 5px;
+    font-size: 2.9em;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    display: grid;
+    gap: 1.6em;
+    margin: 1.6em auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    justify-content: center;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 10px;
+}
+
+.container > .header,
+.container > .content,
+.container > .side-bar,
+.container > .footer,
+.container > div,
+.container > .article {
+    padding: 20px;
+}
+
+.content {
+    grid-column: span 3;
+    grid-row: span 4;
+}
+
+.content > .article {
+    background: #808e9b;
+    padding: 20px;
+    margin-top: 5px;
+    color: #dfe6e9;
+    border-radius: 10px;
+}
+
+.article > h1,
+p {
+    padding: 10px;
+    line-height: 1.5;
+}
+
+.header,
+.footer {
+    border-radius: 10px;
+    grid-column: 1/-1;
+    background-color: #85377b;
+    color: #eee;
+}
+
+.side-bar {
+    border-radius: 10px;
+    background-color: #a770ef;
+    color: #eee;
+    grid-column: span 2;
+    grid-row: span 4;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.side-bar > div {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: justify;
+}
+
+.publicaciones-relacionadas {
+    border-radius: 10px;
+    background-color: #808e9b;
+    display: flex;
+    height: 180px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.publicaciones-relacionadas:hover {
+    cursor: pointer;
+    background: #a770ef;
+}
+
+.side-bar > div > img {
+    width: 200px;
+    align-self: center;
+    border-radius: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        text-align: center;
+    }
+
+    .content {
+        grid-column: 1/-1;
+    }
+
+    .side-bar {
+        grid-column: 1/-1;
+    }
+
+    .publicaciones-relacionadas {
+        grid-column: 1/-1;
+    }
+}
