@@ -109,7 +109,11 @@ p {
     border-radius: 30px;
 }
 
+/*Si la ventana del navegador tiene 768 px o menos se aplicaran los siguientes estilos*/
 @media screen and (max-width: 768px) {
+    body {
+        background-color: gray;
+    }
     .header {
         text-align: center;
     }
